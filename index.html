@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>A BookMarking App</title>
-    
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body>
 
     <div class="overlay"></div>
-    
-    <div class="floater">
-        <div class="floater-top">
-            <input type="text" class="form-control" placeholder="Paste a link">
-        </div>
-        <div class="floater-bottom">
-            <button type="button" class="btn btn-primary btn-small">Add</button>
-        </div>
+
+    <div class="floater content">
+        <form class="bookmark-form">
+            <div class="floater-top">
+                <input type="text" class="form-control" placeholder="Paste a link">
+            </div>
+            <div class="floater-bottom">
+                <button type="submit" class="btn btn-primary btn-small">Add</button>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="bookmarks-list content">
     </div>
     <script src="js/script.js"></script>
 </body>
+
 </html>
