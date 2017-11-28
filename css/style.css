@@ -1,0 +1,57 @@
+body {
+    padding: 30px;
+    background-image: url('../img/image.jpg');
+    background-size: cover;
+}
+
+.floater {
+    background-color: #ffffff;
+    margin: 0 auto;
+    border-radius: 5px;
+    font-size: 20px;
+    max-width: 750px;
+    position: relative;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+}
+
+.floater input[type=text] {
+    padding: 30px 20px;
+    border: none;
+    box-shadow: none;
+    font-size: 14px;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+}
+
+.floater-bottom {
+    padding: 6px 10px 8px;
+    text-align: right;
+}
+
+.floater-bottom button {
+    padding: 4px 8px;
+    font-size: 10px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.80);
+    opacity: 0;
+    transition: 0.3s ease opacity; 
+}
+
+body.show-floater .floater {
+    transform: scale(1.1)
+}
+
+body.show-floater .floater input[type=text] {
+    padding: 50px 20px;
+    font-size: 20px;
+}
+
+body.show-floater .overlay {
+    opacity: 1;
+}
