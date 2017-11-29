@@ -87,12 +87,13 @@ body.show-floater .overlay {
 }
 
 .bookmark .img {
-    width: 80px;
+    width: 120px;
     height: 60px;
     background-image: url('http://hd.wallpaperswide.com/thumbs/purple_sunset-t2.jpg');
     border-radius: 3px;
     margin-right: 20px;
     background-size: cover;
+    background-position: top center;
 }
 
 .bookmark .title {
