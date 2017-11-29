@@ -46,9 +46,11 @@ function addBookmark(event){
 
 function fillBookmarkList(bookmarks = []){
 
-    const bookmarksHtml = bookmarks.map((bookmark) => {
-        return `<a href="#" class="bookmark">
-            ${bookmark.title}
+    const bookmarksHtml = bookmarks.map((bookmark,i) => {
+        return `<a href="#" class="bookmark" data-id="${i}">
+            <div class="img"></div>
+            <div class="title">${bookmark.title}</div>
+            <span class="glyphicon glyphicon-remove"></span>
         </a>
         `;
     }).join('');
@@ -60,6 +62,18 @@ function storeBookmark(bookmarks){
     localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
 }
 
+function deleteBookmark(e){
+
+    if(!e.target.matches('.glyphicon-remove')) return;
+
+    const index = e.target.parentNode.dataset.id;
+    bookmarks.splice(index, 1);
+    fillBookmarkList(bookmarks);
+    storeBookmark(bookmarks);
+
+}
+
 input.addEventListener('focus', showFloater);
 overlay.addEventListener('click', hideFloater);
 bookmarkForm.addEventListener('submit', addBookmark);
+bookmarkList.addEventListener('click', deleteBookmark);

@@ -62,11 +62,11 @@ body.show-floater .overlay {
 
 .bookmark {
     
-    display: block;
+    display: flex;
     background: #ffffff;
     color: #999999;
     padding: 20px;
-    /* border-bottom: 3px solid #c00c00; */
+    position: relative;
     font-size: 16px;
 }
 
@@ -84,4 +84,31 @@ body.show-floater .overlay {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border-bottom: 0;
+}
+
+.bookmark .img {
+    width: 80px;
+    height: 60px;
+    background-image: url('http://hd.wallpaperswide.com/thumbs/purple_sunset-t2.jpg');
+    border-radius: 3px;
+    margin-right: 20px;
+    background-size: cover;
+}
+
+.bookmark .title {
+    display: flex;
+    align-items: center;    
+}
+
+.bookmark .glyphicon {
+    top: 10px;
+    right: 10px;
+    color: #EEE;
+    transition: 0.3s ease color;
+    position: absolute;
+    font-size: 12px;
+}
+
+.bookmark:hover .glyphicon {
+    color: #aaaaaa;
 }
